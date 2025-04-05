@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tosh-Qaychi-Qog‘oz</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-[#00000080] flex items-center justify-center hidden z-50">
+        <div class="bg-[#FFFFFF] p-8 rounded-xl max-w-md w-full relative">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-[#3B4262]">RULES</h1>
+                <p id="closeModal" class="text-[#3B4262] opacity-50 cursor-pointer text-2xl">X</p>
+            </div>
+            <img id="rulesImage" src="./src/images/rule-basic.png" alt="Rules" class="w-full">
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-[#1F3756] to-[#141539] min-h-screen py-6 flex flex-col items-center">
+        <!-- Navbar -->
+        <div id="navbar" class="flex justify-between w-[700px] border-4 border-[#FFFFFF33] rounded-2xl bg-transparent p-4">
+            <img class="pl-4 py-2 w-40" src="./src/images/tipa-logo.svg" alt="logo">
+            <div class="bg-[#FFFFFF] px-8 py-4 rounded-xl text-center w-[130px] h-[100px] flex flex-col justify-center">
+                <h6 class="font-semibold tracking-[2px] text-[#2A45C2] text-sm">SCORE</h6>
+                <span id="score" class="font-bold text-[#565468] text-5xl leading-tight">0</span>
+            </div>
+        </div>
+
+        <!-- Playing Zone -->
+        <div id="playingZone" class="flex justify-center items-center space-x-20 mt-16 hidden">
+            <div class="userImg flex flex-col items-center">
+                <h4 class="text-center text-[#FFFFFF] text-xl tracking-[2px] font-bold mb-8">YOU PICKED</h4>
+                <div id="userChoice" class="">
+                    <img width="198px" height="203px" id="userChoiceImg" src="./src/images/paper.svg" alt="">
+                </div>
+            </div>
+            <div class="settings flex flex-col items-center">
+                <h1 id="result" class="text-center text-[#FFFFFF] text-5xl font-bold mb-6">YOU WIN</h1>
+                <div id="playAgain" class="text-center px-12 py-3 bg-[#FFFFFF] rounded-lg text-[#3B4262] tracking-[2px] font-semibold cursor-pointer hover:bg-[#F3F4F6]">PLAY AGAIN</div>
+            </div>
+            <div class="robot flex flex-col items-center">
+                <h4 class="text-center text-[#FFFFFF] text-xl tracking-[2px] font-bold mb-8">THE HOUSE PICKED</h4>
+                <div id="computerChoice" class="">
+                    <img width="198px" height="203px" id="computerChoiceImg" src="./src/images/load.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <ul id="choices" class="bg-[url(./images/triangle.png)] bg-no-repeat bg-center grid grid-cols-2 mt-10 gap-y-4 gap-x-10 w-[472px] mx-auto">
+            <li data-choice="scissors" class="">
+                <img src="./src/images/scissors.svg" alt="paper">
+            </li>
+            <li data-choice="rock" class="place-self-start">
+                <img src="./src/images/rock.svg" alt="rock">
+            </li>
+            <li data-choice="lizard" class="place-self-end hidden">
+                <img src="./src/images/lizard.png" alt="lizard">
+            </li>
+            <li data-choice="puppy" class="place-self-end hidden">
+                <img src="./src/images/puppy.png" alt="puppy">
+            </li>
+            <li data-choice="paper" class="col-span-2 place-self-center">
+                <img src="./src/images/paper.svg" alt="scissors">
+            </li>
+        </ul>
+
+        <!-- Advanced and Rules Buttons -->
+        <div class="absolute right-8 bottom-2 space-x-4">
+            <div id="advancedBtn" class="inline-block rounded-lg cursor-pointer text-center tracking-[2px] font-semibold text-white border-2 border-white px-8 py-1 hover:bg-white hover:text-[#3B4262]">ADVANCED</div>
+            <div id="rulesBtn" class="inline-block rounded-lg cursor-pointer text-center tracking-[2px] font-semibold text-white border-2 border-white px-8 py-1 hover:bg-white hover:text-[#3B4262]">RULES</div>
+        </div>
+    </div>
+
+    <script src="./src/js/main.js" type="module"></script>
+</body>
+</html>
