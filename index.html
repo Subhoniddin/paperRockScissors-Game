@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tosh-Qaychi-Qog‘oz</title>
-    <link rel="stylesheet" href="./src/style.css">
+  <script type="module" crossorigin src="/assets/index-BzJSaZWu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cu4xYH4Q.css">
 </head>
 <body>
     <!-- Modal -->
     <div id="modal" class="fixed inset-0 bg-[#00000080] flex items-center justify-center hidden z-50">
-        <div class="bg-[#FFFFFF] p-8 rounded-xl max-w-md w-full relative">
+        <div class="bg-white p-8 rounded-xl max-w-md relative">
             <div class="flex justify-between items-center mb-8">
                 <h1 class="text-3xl font-bold text-[#3B4262]">RULES</h1>
                 <p id="closeModal" class="text-[#3B4262] opacity-50 cursor-pointer text-2xl">X</p>
             </div>
-            <img id="rulesImage" src="./src/images/rule-basic.png" alt="Rules" class="w-full">
+            <img id="rulesImage" src="" alt="Rules" class="w-full">
         </div>
     </div>
 
     <div class="bg-gradient-to-b from-[#1F3756] to-[#141539] min-h-screen py-6 flex flex-col items-center">
         <!-- Navbar -->
         <div id="navbar" class="flex justify-between w-[700px] border-4 border-[#FFFFFF33] rounded-2xl bg-transparent p-4">
-            <img class="pl-4 py-2 w-40" src="./src/images/tipa-logo.svg" alt="logo">
+            <img class="pl-4 py-2 w-40" src="/images/tipa-logo.svg" alt="logo">
             <div class="bg-[#FFFFFF] px-8 py-4 rounded-xl text-center w-[130px] h-[100px] flex flex-col justify-center">
                 <h6 class="font-semibold tracking-[2px] text-[#2A45C2] text-sm">SCORE</h6>
                 <span id="score" class="font-bold text-[#565468] text-5xl leading-tight">0</span>
@@ -33,7 +34,7 @@
             <div class="userImg flex flex-col items-center">
                 <h4 class="text-center text-[#FFFFFF] text-xl tracking-[2px] font-bold mb-8">YOU PICKED</h4>
                 <div id="userChoice" class="">
-                    <img width="198px" height="203px" id="userChoiceImg" src="./src/images/paper.svg" alt="">
+                    <img width="198px" height="203px" id="userChoiceImg" src="/images/paper.svg" alt="">
                 </div>
             </div>
             <div class="settings flex flex-col items-center">
@@ -43,26 +44,26 @@
             <div class="robot flex flex-col items-center">
                 <h4 class="text-center text-[#FFFFFF] text-xl tracking-[2px] font-bold mb-8">THE HOUSE PICKED</h4>
                 <div id="computerChoice" class="">
-                    <img width="198px" height="203px" id="computerChoiceImg" src="./src/images/load.png" alt="">
+                    <img width="198px" height="203px" id="computerChoiceImg" src="/images/load.png" alt="">
                 </div>
             </div>
         </div>
 
-        <ul id="choices" class="bg-[url(./images/triangle.png)] bg-no-repeat bg-center grid grid-cols-2 mt-10 gap-y-4 gap-x-10 w-[472px] mx-auto">
-            <li data-choice="scissors" class="">
-                <img src="./src/images/scissors.svg" alt="paper">
+        <ul id="choices" class="bg-[url(/images/triangle.png)] bg-no-repeat bg-center grid grid-cols-2 mt-10 gap-y-4 gap-x-10 w-[472px] mx-auto">
+            <li data-choice="scissors" class=" hover:shadow-2xlnded-full">
+                <img src="/images/scissors.svg" alt="paper">
             </li>
-            <li data-choice="rock" class="place-self-start">
-                <img src="./src/images/rock.svg" alt="rock">
+            <li data-choice="rock" class="place-self-start hover:shadow-2xl rounded-full">
+                <img src="/images/rock.svg" alt="rock">
             </li>
-            <li data-choice="lizard" class="place-self-end hidden">
-                <img src="./src/images/lizard.png" alt="lizard">
+            <li data-choice="lizard" class="place-self-end hidden hover:shadow-2xl rounded-full">
+                <img src="/images/lizard.png" alt="lizard">
             </li>
-            <li data-choice="puppy" class="place-self-end hidden">
-                <img src="./src/images/puppy.png" alt="puppy">
+            <li data-choice="puppy" class="place-self-end hidden hover:shadow-2xl rounded-full">
+                <img src="/images/puppy.png" alt="puppy">
             </li>
-            <li data-choice="paper" class="col-span-2 place-self-center">
-                <img src="./src/images/paper.svg" alt="scissors">
+            <li data-choice="paper" class="col-span-2 place-self-center hover:shadow-2xl rounded-full">
+                <img src="/images/paper.svg" alt="scissors">
             </li>
         </ul>
 
@@ -73,6 +74,5 @@
         </div>
     </div>
 
-    <script src="./src/js/main.js" type="module"></script>
 </body>
 </html>
